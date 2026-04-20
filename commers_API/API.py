@@ -222,8 +222,8 @@ class VerifyOTPView(ViewSet):
         access = refresh.access_token
 
         response = Response({"refresh": str(refresh), "access": str(access)})
-        response.set_cookie(key='access', value=str(access), httponly=True, secure=True, samesite='None')
-        response.set_cookie(key='refresh', value=str(refresh), httponly=True, secure=True, samesite='None')
+        response.set_cookie(key='access', value=str(access), httponly=True, secure=True, samesite='None',path='/')
+        response.set_cookie(key='refresh', value=str(refresh), httponly=True, secure=True, samesite='None',path='/')
         return response
 
 
@@ -244,8 +244,8 @@ class CustomTokenObtainPairView(TokenObtainPairView):
         response = super().post(request, *args, **kwargs)
         data = response.data
 
-        response.set_cookie(key='access', value=data.get('access'), httponly=True, secure=True, samesite='None')
-        response.set_cookie(key='refresh', value=data.get('refresh'), httponly=True, secure=True, samesite='None')
+        response.set_cookie(key='access', value=data.get('access'), httponly=True, secure=True, samesite='None',path='/')
+        response.set_cookie(key='refresh', value=data.get('refresh'), httponly=True, secure=True, samesite='None',path='/')
         return response
 
 
