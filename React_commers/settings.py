@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') == 'True'
 
-ALLOWED_HOSTS = ['192.168.1.192', "localhost",'192.168.100.9' , '192.168.8.166','192.168.100.157']
+ALLOWED_HOSTS = ['192.168.1.192', "localhost",'192.168.100.9' , '192.168.8.166','192.168.100.157','commers-backend-1.onrender.com']
 
 
 # Application definition
