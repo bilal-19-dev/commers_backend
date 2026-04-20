@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.192', "localhost",'192.168.100.9' , '192.168.8.166','192.168.100.157']
+ALLOWED_HOSTS = ['192.168.1.192', "localhost",'192.168.100.9' , '192.168.8.166','192.168.100.157','luminous-dragon-eaa713.netlify.app']
 
 
 # Application definition
@@ -75,6 +75,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.8.166:3000",  # أو حسب عنوان موقعك
     "http://192.168.1.192:3000",  # أو حسب عنوان موقعك
     "http://192.168.100.157:3000",  # أو حسب عنوان موقعك
+    "https://luminous-dragon-eaa713.netlify.app",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
@@ -83,6 +84,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://192.168.100.9:3000",
     "http://192.168.8.166:3000",
     "http://192.168.100.157:3000",
+    "https://luminous-dragon-eaa713.netlify.app",
 ]
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
