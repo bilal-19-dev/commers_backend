@@ -75,6 +75,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.8.166:3000",  # أو حسب عنوان موقعك
     "http://192.168.1.192:3000",  # أو حسب عنوان موقعك
     "http://192.168.100.157:3000",  # أو حسب عنوان موقعك
+    "https://stupendous-madeleine-950f81.netlify.app/"
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
@@ -83,6 +84,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://192.168.100.9:3000",
     "http://192.168.8.166:3000",
     "http://192.168.100.157:3000",
+    "https://stupendous-madeleine-950f81.netlify.app"
 ]
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
