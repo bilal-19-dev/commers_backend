@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 ]
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),   # توكن قصير المدى
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=1),   # توكن قصير المدى
     "REFRESH_TOKEN_LIFETIME": timedelta(days=30),    # طويل المدى (شهر)
     "ROTATE_REFRESH_TOKENS": True,                   # 🔁 توليد refresh جديد كل مرة
     "BLACKLIST_AFTER_ROTATION": True,                # يمنع إعادة استعمال القديم
@@ -68,6 +68,10 @@ REST_FRAMEWORK = {
     ]
 }
 CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SECURE = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://10.242.39.148:3000",  # أو حسب عنوان موقعك

@@ -272,7 +272,7 @@ class CustomTokenRefreshView(TokenRefreshView):
 
         response.set_cookie(
             key='access', value=response.data.get('access'),
-            httponly=True, secure=True, samesite='None',
+            httponly=True, secure=True, samesite='None',path='/'
         )
         return response
 
