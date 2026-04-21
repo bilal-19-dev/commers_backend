@@ -35,7 +35,7 @@ DEBUG = os.getenv('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['192.168.1.192', "localhost",'192.168.100.9' , '192.168.8.166','192.168.100.157','commers-backend-1.onrender.com']
 
-
+CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -81,6 +81,16 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.100.157:3000",  # أو حسب عنوان موقعك
     "https://stupendous-madeleine-950f81.netlify.app"
 ]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://192.168.1.192:3000",
