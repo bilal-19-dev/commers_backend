@@ -35,7 +35,6 @@ DEBUG = os.getenv('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['192.168.1.192', "localhost",'192.168.100.9' , '192.168.8.166','192.168.100.157','commers-backend-1.onrender.com']
 
-CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
 
 INSTALLED_APPS = [
